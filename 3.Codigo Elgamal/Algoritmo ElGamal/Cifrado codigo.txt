@@ -1,0 +1,69 @@
+//--array en Char--
+        System.out.println("Cifrado");
+        System.out.println();
+        JOptionPane.showMessageDialog(null, "Mensaje cifrado");
+        for (int i = 0; i < cadena.length; i++) {
+            for (int j = 0; j < car.length; j++) {
+                if (cadena[i] == car[j]) {
+                    num = (int) ((Math.pow(j, e)) % n);
+                    System.out.println("Num"+i);
+                    
+                    val = (int) num % car.length;
+                    System.out.print(val+"-");
+                    cifrado[i] = car[val];
+                    
+                }
+            }
+        }
+         for (int i = 0; i < cifrado.length; i++) {
+            System.out.print(cifrado[i]);
+        }
+        System.out.println();
+        System.out.println("Mensaje cifrado");
+        PrintWriter pw = new PrintWriter("cifrado.txt");
+        pw.println(cifrado);
+        pw.close();
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //--array en Char--
+        System.out.println();
+        System.out.println("Descifrado");
+        System.out.println();
+        JOptionPane.showMessageDialog(null, "Mensaje Descifrado");
+        for (int i = 0; i < cadena.length; i++) {
+            for (int j = 0; j < car.length; j++) {
+                if (cadena[i] == car[j]) {
+                    num = (int) ((Math.pow(j, d)) % n);
+                    val = (int) num % car.length;
+                    System.out.print(val+"-");
+                    cifrado[i] = car[val];
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("Mensaje Descifrado");
+        PrintWriter pw = new PrintWriter("Descifrado.txt");
+        pw.println(cifrado);
+        pw.close();
